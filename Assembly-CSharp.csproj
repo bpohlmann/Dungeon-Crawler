@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\EnemySonar.cs" />
      <Compile Include="Assets\Scripts\EPController.cs" />
      <Compile Include="Assets\Scripts\Footsteps.cs" />
+     <Compile Include="Assets\Scripts\GamePause.cs" />
      <Compile Include="Assets\Scripts\HealthController.cs" />
      <Compile Include="Assets\Scripts\HoverEffects.cs" />
      <Compile Include="Assets\Scripts\InGameMenu.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Shooting.cs" />
+     <Compile Include="Assets\Scripts\SmallMenu.cs" />
      <Compile Include="Assets\Scripts\StoneBehaviour.cs" />
      <Compile Include="Assets\Scripts\WaterdropSound.cs" />
      <Compile Include="Assets\Scripts\WaterQuest.cs" />
