@@ -7,20 +7,27 @@ public class RitterFolgenAI : MonoBehaviour {
     public Transform Spieler;
     public float geschwindigkeit = 100;
     public float minimalAbstand = 3;
-
+    private UnityEngine.AI.NavMeshAgent agent;
     private Animator anim;
     private int standBool;
-    
+
+    private RitterAI ritterAi;
 
     // Use this for initialization
 
     void Start () {
         anim = transform.GetComponent<Animator>();
         standBool = Animator.StringToHash("Stehen");
+        ritterAi = GetComponent<RitterAI>();
+        ritterAi.enabled = !ritterAi.enabled;
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent.ResetPath();
+       
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         Rotieren(Spieler.position);
         Folgen(Spieler.position );
        

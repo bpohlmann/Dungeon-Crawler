@@ -13,7 +13,8 @@ public class RitterAI : MonoBehaviour {
     public bool spielerGefunden = false;
     private bool quest = false;
     private Text messageText;
-    
+
+    private RitterFolgenAI ritterFolgenAi;
 
     private Animator anim;
     private int standBool;
@@ -25,6 +26,8 @@ public class RitterAI : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         messageText = GameObject.FindGameObjectWithTag("Message").
             GetComponent<Text>();	//uGUI
+
+        ritterFolgenAi = GetComponent<RitterFolgenAI>(); 
     }
 	
 	// Update is called once per frame
@@ -93,6 +96,7 @@ public class RitterAI : MonoBehaviour {
                     quest = true;
                     Time.timeScale = 1;
                     dialog = false;
+                    ritterFolgenAi.enabled = !ritterFolgenAi.enabled;
 
                 }
                 if (GUILayout.Button("Nein"))
@@ -100,6 +104,7 @@ public class RitterAI : MonoBehaviour {
                     quest = false;
                     Time.timeScale = 1;
                     dialog = false;
+                    
                 }
                 GUILayout.EndArea();
             }

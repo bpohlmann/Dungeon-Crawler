@@ -3386,7 +3386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 690395133}
   m_Layer: 0
-  m_Name: Waypoints
+  m_Name: Waypoints(fest)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11139,6 +11139,14 @@ Prefab:
       propertyPath: m_Name
       value: Ritter
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 4a07f197bda27d84fa603e06f8e034bf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4a07f197bda27d84fa603e06f8e034bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a07f197bda27d84fa603e06f8e034bf, type: 3}
   m_IsPrefabParent: 0
@@ -15991,7 +15999,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1993091291}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 442f64a59306a834488f3448caf4ca99, type: 3}
   m_Name: 
@@ -16007,7 +16015,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1993091291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4876d8e9876fb61479100a31f80cc50e, type: 3}
   m_Name: 
