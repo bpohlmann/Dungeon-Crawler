@@ -967,6 +967,30 @@ Transform:
   m_PrefabParentObject: {fileID: 4979599968713894, guid: d6326608c1fd14f4dbf52aa5c1eadb5a,
     type: 2}
   m_PrefabInternal: {fileID: 202466165}
+--- !u!1 &215852537 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1326820073730582, guid: 253ab2d748ca4cd42877ca7f68eb99e1,
+    type: 2}
+  m_PrefabInternal: {fileID: 799950990}
+--- !u!114 &215852543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 215852537}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b5ec6153a1d55438228df10fe66844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceFog: 1
+  excludeFarPixels: 1
+  useRadialDistance: 0
+  heightFog: 1
+  height: 5
+  heightDensity: 6.26
+  startDistance: 0
+  fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
 --- !u!1001 &227126992
 Prefab:
   m_ObjectHideFlags: 0
@@ -2098,6 +2122,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4246887338804566, guid: b4fec4ae4801d1b4daee2fc8d3345d3d,
     type: 2}
   m_PrefabInternal: {fileID: 2098598544}
+--- !u!4 &412927752 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4749567018969990, guid: 6ece0d620eaa9414db745e4aa038f2e5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1896611639}
 --- !u!4 &419363407 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4731019986310324, guid: 8b512f2f5b05b0842bbc27604b1ae5db,
@@ -16024,6 +16053,8 @@ MonoBehaviour:
   Spieler: {fileID: 14449322}
   geschwindigkeit: 100
   minimalAbstand: 3
+  enemy: {fileID: 412927752}
+  damageValue: 1
 --- !u!65 &1993091297
 BoxCollider:
   m_ObjectHideFlags: 0

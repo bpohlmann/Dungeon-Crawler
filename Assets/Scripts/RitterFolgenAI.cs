@@ -11,6 +11,16 @@ public class RitterFolgenAI : MonoBehaviour {
     private Animator anim;
     private int standBool;
 
+	public Transform enemy;
+
+	private bool attacking = false;
+
+	public float damageValue = 1;
+	private int attackBool;
+
+
+	private bool readyToHit = true;
+
     private RitterAI ritterAi;
 
     // Use this for initialization
@@ -22,13 +32,18 @@ public class RitterFolgenAI : MonoBehaviour {
         ritterAi.enabled = !ritterAi.enabled;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.ResetPath();
-       
+		attackBool = Animator.StringToHash ("attackBool");
 
     }
 
     // Update is called once per frame
     void Update () {
-        Rotieren(Spieler.position);
+		if (attacking == false) {
+
+			Rotieren (Spieler.position);
+		} else {
+			Rotieren (enemy.position);		
+		}
         Folgen(Spieler.position );
        
     }
@@ -65,4 +80,38 @@ public class RitterFolgenAI : MonoBehaviour {
         }
         GetComponent<Rigidbody>().velocity = a; 
     }
+
+
+	void OnTriggerStay(Collider other)
+	{
+		
+			if (other.CompareTag("Enemy")/* && EnemyHealth.health > 0*/)
+			{
+				if (readyToHit)
+				{
+					readyToHit = false;
+					
+					
+
+					other.gameObject.SendMessage (
+						"ApplyDamage",damageValue,SendMessageOptions.DontRequireReceiver);
+					StartCoroutine("SetReadyToHit");
+				}
+			}
+
+
+
+}
+
+	IEnumerator SetReadyToHit()
+	{
+		anim.SetBool(attackBool,true);
+		attacking = true;
+		yield return new WaitForSeconds(0.5F);
+		anim.SetBool(attackBool,false);
+		attacking = false;
+		yield return new WaitForSeconds(0.5F);
+		readyToHit = true;
+
+	}
 }

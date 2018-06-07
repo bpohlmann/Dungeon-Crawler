@@ -16,6 +16,7 @@ public class RitterAI : MonoBehaviour {
 
     private RitterFolgenAI ritterFolgenAi;
 
+	private bool pause = false;
     private Animator anim;
     private int standBool;
     // Use this for initialization
@@ -85,7 +86,7 @@ public class RitterAI : MonoBehaviour {
     }
     private void OnGUI()
     {
-        if (dialog)
+		if (dialog && pause == false)
         {
             if (quest == false) {
                 Time.timeScale = 0; 
@@ -104,12 +105,19 @@ public class RitterAI : MonoBehaviour {
                     quest = false;
                     Time.timeScale = 1;
                     dialog = false;
-                    
+					StartCoroutine("DialogPause");
                 }
                 GUILayout.EndArea();
             }
             
         }
     }
-    
+	IEnumerator DialogPause()
+	{
+		pause = true;
+
+		yield return new WaitForSeconds(2.0F);
+		pause = false;
+
+	}
 }
