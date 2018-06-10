@@ -9,9 +9,9 @@ public class WaterQuest : MonoBehaviour {
 	public InventoryItem bucketInventoryItem;
 	//private GUIText messageText;	//GUIElement
 	private Text messageText;	//uGUI
-	private string questMessage = "Suche einen Behälter, " +
-		"um dieses Wasser zu trinken.";
-	private string questMessage2 = "Du brauchst einen leeren Behälter.";
+	private string questMessage = "Finde den Ritter, " +
+		"der einen Wassereimer sucht";
+	private string questMessage2 = "Finde den Ritter und seinen Wassereimer";
 	private bool gotQuest = false;
 	private string questEndedMessage = "<size=20>Gratulation!</size>\n" + 
 		"Du hast die Aufgabe gelöst.";
@@ -20,7 +20,11 @@ public class WaterQuest : MonoBehaviour {
 	private PlayerController playerController;
 	private EPController epController;
 
-	void Start () {
+    public GameObject Ritter;
+
+     RitterFolgenAI ritterFolgenAi;
+
+    void Start () {
 		//finalBucket.SetActive(false);
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerController = player.GetComponent<PlayerController>();
@@ -31,26 +35,29 @@ public class WaterQuest : MonoBehaviour {
 			GetComponent<Text>();	//uGUI
 		epController = GameObject.FindGameObjectWithTag("GameController").
 			GetComponent<EPController>();
+        ritterFolgenAi = Ritter.GetComponent<RitterFolgenAI>();
 
-	}
+    }
 	
 	void OnTriggerEnter(Collider other) 
 	{	
-		if(other.gameObject == player)
+		if(other.gameObject == player )
 		{
-			if(inventory.RemoveItem(bucketInventoryItem))
-			{
+            if (ritterFolgenAi.isActiveAndEnabled) {
+                if (inventory.RemoveItem(bucketInventoryItem))
+                {
 
-				//finalBucket.SetActive(true);
-				//Runterfallenden Bucket erzeugen
-				//Quaternion rot = new Quaternion();
-				//Drehung des urspruenglichen Modells ausgleichen
-				//rot.eulerAngles = new Vector3(-90,0,0);
-				Instantiate(bucketInventoryItem.prefab,player.transform.position + player.transform.forward + player.transform.up,Quaternion.identity);
+                    //finalBucket.SetActive(true);
+                    //Runterfallenden Bucket erzeugen
+                    //Quaternion rot = new Quaternion();
+                    //Drehung des urspruenglichen Modells ausgleichen
+                    //rot.eulerAngles = new Vector3(-90,0,0);
+                    Instantiate(bucketInventoryItem.prefab, player.transform.position + player.transform.forward + player.transform.up, Quaternion.identity);
 
-				playerController.gameEnded = true;
-				messageText.text = questEndedMessage;
-				epController.AddPoints (eps);
+                    playerController.gameEnded = true;
+                    messageText.text = questEndedMessage;
+                    epController.AddPoints(eps);
+                }
 			}
 			else
 			{

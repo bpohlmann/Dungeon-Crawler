@@ -16,7 +16,9 @@ public class PlayerController : MonoBehaviour {
 		playerHealth = GetComponent<PlayerHealth>();
 		controller = GetComponent<CharacterController>();	
 		destRotation = transform.rotation;
-	}
+        
+
+    }
 
 	void Update() {
 		if(playerHealth.health > 0 && !gameEnded)

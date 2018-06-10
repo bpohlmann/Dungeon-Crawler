@@ -14,6 +14,8 @@ public class RitterAI : MonoBehaviour {
     private bool quest = false;
     private Text messageText;
 
+
+
     private RitterFolgenAI ritterFolgenAi;
 
 	private bool pause = false;
@@ -91,7 +93,7 @@ public class RitterAI : MonoBehaviour {
             if (quest == false) {
                 Time.timeScale = 0; 
                 GUILayout.BeginArea(new Rect(10, 10, 200, 200));
-                GUILayout.Label("ja/Nein");
+                GUILayout.Label("Hilfst du mir meinen Eimer zu finden?");
                 if (GUILayout.Button("Ja"))
                 {
                     quest = true;

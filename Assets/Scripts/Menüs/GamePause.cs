@@ -8,7 +8,9 @@ public class GamePause: MonoBehaviour {
 	void Start()
 	{
 		Canavas.gameObject.SetActive(false);
-	}
+        
+
+    }
 	// Update is called once per frame
 	void Update ()
 	{

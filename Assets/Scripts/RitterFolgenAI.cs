@@ -66,7 +66,8 @@ public class RitterFolgenAI : MonoBehaviour {
         if (abstand.magnitude > minimalAbstand) {
             anim.SetBool(standBool, false);
             a = richtung.normalized * geschwindigkeit * Time.deltaTime;
-           
+            agent.SetDestination(SpielerPosition);
+
         }
         else
         {
@@ -77,8 +78,10 @@ public class RitterFolgenAI : MonoBehaviour {
         if (abstand.magnitude <= minimalAbstand  )
         {
             anim.SetBool(standBool, true);
+            agent.ResetPath();
         }
-        GetComponent<Rigidbody>().velocity = a; 
+         GetComponent<Rigidbody>().velocity = a; 
+        
     }
 
 

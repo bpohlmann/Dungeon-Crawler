@@ -11,8 +11,8 @@ public class SmallMenu : MonoBehaviour {
 
 	public void quit (string name)
 	{
-		SceneManager.LoadScene(name);
-	}
+        Application.Quit();
+    }
 
 	public void goOn()
 	{

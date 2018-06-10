@@ -63,7 +63,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1049347364284114
 GameObject:
   m_ObjectHideFlags: 1
@@ -650,7 +650,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageValue: 1
   attackingSpeed: 4
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
   waypointPauseTime: 2
 --- !u!114 &114772358679620410
 MonoBehaviour:
