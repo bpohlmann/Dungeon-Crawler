@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 1791
+  controlID: 113
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 1717
+  controlID: 54
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 1718
+  controlID: 55
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 388
     height: 572
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.68625164, y: -0.000056730965, z: 0.000054446144, w: 0.72736424}
     speed: 2
-    m_Value: {x: 0.68625164, y: -0.000056730965, z: 0.000054446144, w: 0.72736424}
+    m_Value: {x: -0.68625164, y: 0.000056730965, z: -0.000054446144, w: -0.72736424}
   m_Size:
     m_Target: 79.42015
     speed: 2
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 6e65fafff896faff80acfaff1afcffff000000007c0a0100
+    m_ExpandedIDs: e4f8ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -586,13 +586,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/_Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\x\Documents\Benjamin\Schule\Seminarfach Informatik\Dungeon-Crawler
+  m_LastProjectPath: C:\Users\x\Documents\Benjamin\Schule\Seminarfach Informatik\DC
+    BackUps\Dungeon-Crawler
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c4290000
-    m_LastClickedID: 10692
-    m_ExpandedIDs: 00000000b0270000ca270000ea27000060280000942800009a290000c429000000ca9a3bffffff7f
+    m_SelectedIDs: 2a2f0000
+    m_LastClickedID: 12074
+    m_ExpandedIDs: 00000000782d0000842d0000a22d0000042e0000342e00000a2f00002a2f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,7 +621,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b0270000ca270000ea27000060280000942800009a290000c429000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000782d0000842d0000a22d0000042e0000342e00000a2f00002a2f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
